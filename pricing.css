@@ -16782,6 +16782,37 @@ li {
     padding-bottom: 0; /* Remove padding from the very last section */
 }
 /* --- END: NEW PRICING SECTION STYLES --- */ 
+/* --- START: Custom Intro Animation --- */
+
+/* This defines the animation steps */
+@keyframes blurFadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+/* This is the main class you will add to your HTML elements */
+.intro-animation {
+  opacity: 0; /* Start invisible to prevent flashing */
+  animation-name: blurFadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards; /* Ensures the element stays visible after animating */
+}
+
+/* Optional: Use these classes to make animations appear one after another */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+/* --- END: Custom Intro Animation --- */
 #w-node-b43d7347-22c3-5de8-c06d-1928045d21cf-d10f5175, #w-node-_8f0435de-635b-fd7b-ec43-1f2a3c87f6cb-d10f5175, #w-node-d4727884-0b53-9883-cba4-0cf32b2953ba-d10f5175 {
   grid-area: span 1 / span 4 / span 1 / span 4;
 }

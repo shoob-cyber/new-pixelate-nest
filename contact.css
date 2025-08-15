@@ -3484,7 +3484,8 @@ li {
 
 .utility-page-wrap {
   color: var(--white);
-../new-pixelatenest/assets/abstract_banner_with_flowing_orange_waves_design_0407.jpg  background-position: 50%;
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/685e9232ff68955a812cee0f_registerpage.png");
+  background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
@@ -4101,15 +4102,15 @@ li {
 }
 
 .main-hero.priceing-single {
-  background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/685f7afbdece5a2aeb84448e_Priceing%20Bg.avif");
 }
 
 .main-hero.about-v2 {
-  background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/685fbec72faac99d3f78c7d7_About%20V2%20Bg.avif");
 }
 
 .main-hero.about-v3-hero-bg {
-  background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/686018f60607f65454ba270b_About%20V3%20Bg.avif");
 }
 
 .main-hero.features-v3-hero {
@@ -4668,7 +4669,7 @@ li {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   background-color: #0000;
-  background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/684338943f4ece7c8850c4e2_Link%20BG.avif");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 24px;
@@ -4725,7 +4726,7 @@ li {
 }
 
 .footer {
-  background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/6843d77d5f7db3d6db7c3932_Footer%20BG.avif");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5281,7 +5282,7 @@ li {
 .features-01-card-wrap {
   grid-column-gap: 39px;
   grid-row-gap: 39px;
-  background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/68543ca7334a8c0c89aed0c8_features%20(1).avif");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5905,7 +5906,6 @@ li {
 
 .cta-v1 {
   margin-bottom: 60px;
-  margin-top: 250px;
 }
 
 .faq-wrap {
@@ -6504,7 +6504,7 @@ li {
 
 .features-02-card {
   z-index: 21;
-  background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/6856cdcb19218688bad01922_features.avif");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -6527,7 +6527,7 @@ li {
 .features-02-card-content {
   z-index: 3;
   width: var(--100);
-  background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/6856cdcb19218688bad01922_features.avif");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6590,7 +6590,7 @@ li {
 }
 
 .footer-v2 {
-  background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/6857ac3bdf07afc2e75e0e75_Footer%20V2%20BG.avif");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6603,7 +6603,7 @@ li {
 }
 
 .integration {
-  background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/6856eef92f7d431e180e8fd9_home%20(1).avif");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6713,7 +6713,7 @@ li {
 }
 
 .main-hero-03 {
-  background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/6857dd7b9822ef1309f0fd25_Home%2003%20Bg.avif");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8360,7 +8360,8 @@ li {
 .full-container {
   grid-column-gap: 110px;
   grid-row-gap: 110px;
-../new-pixelatenest/assets/abstract_banner_with_flowing_orange_waves_design_0407.jpg  background-position: 50%;
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/685e9232ff68955a812cee0f_registerpage.png");
+  background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: flex-start;
@@ -9074,7 +9075,7 @@ li {
 }
 
 .footer-v3 {
-  background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/6843d77d5f7db3d6db7c3932_Footer%20BG.avif");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14712,7 +14713,7 @@ li {
   }
 
   .main-hero.about-v3-hero-bg {
-    background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+    background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/685f7afbdece5a2aeb84448e_Priceing%20Bg.avif");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -16961,74 +16962,7 @@ li {
     grid-row-gap: 18px;
   }
 }
-/* --- START: CSS FIX FOR FOOTER LINK HOVER ANIMATION --- */
 
-/* 1. Set up the link container */
-.footer-link {
-  position: relative; /* This is essential for positioning the text inside */
-  overflow: hidden;   /* This hides the text that moves in from the bottom */
-  display: block;     /* Ensures the container has a defined height */
-}
-
-/* 2. Style both lines of text and set up the transition */
-.footer-link .footer-link-text {
-  display: block;
-  padding-bottom: 2px;
-  transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1); /* Smooth animation */
-}
-
-/* 3. Position the second line of text (the hover state) below the first one */
-.footer-link .footer-link-text.absolute-link {
-  color: var(--white); /* Make the hover text solid white */
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(100%); /* Move it down, out of sight */
-}
-
-/* 4. Animate on hover */
-.footer-link:hover .footer-link-text {
-  transform: translateY(-100%); /* Move the original text up and out of sight */
-}
-
-.footer-link:hover .footer-link-text.absolute-link {
-  transform: translateY(0); /* Move the second text up into view */
-}
-/* --- Add this to the end of your about.css file --- */
-
-.card-content-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
-  height: 100%;
-  z-index: 2;
-  position: relative;
-}
-
-.card-content-wrap .h4 {
-  margin-bottom: 16px;
-}
-
-.card-content-wrap .p-text-02 {
-  margin-top: 0;
-}
-/* --- START: Hover Effect for Mission/Vision/Goal Cards --- */
-
-/* This prepares the card for a smooth animation */
-.about-us-content-list {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* This is the visual effect that happens on hover */
-.about-us-content-list:hover {
-  transform: translateY(-12px) scale(1.03);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-}
-
-/* --- END: Hover Effect --- */
 #w-node-b43d7347-22c3-5de8-c06d-1928045d21cf-d10f5175,
 #w-node-_8f0435de-635b-fd7b-ec43-1f2a3c87f6cb-d10f5175,
 #w-node-d4727884-0b53-9883-cba4-0cf32b2953ba-d10f5175 {
