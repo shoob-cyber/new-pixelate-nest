@@ -5905,6 +5905,7 @@ li {
 
 .cta-v1 {
   margin-bottom: 60px;
+  margin-top: 250px;
 }
 
 .faq-wrap {
@@ -16993,7 +16994,27 @@ li {
 .footer-link:hover .footer-link-text.absolute-link {
   transform: translateY(0); /* Move the second text up into view */
 }
+/* --- Add this to the end of your about.css file --- */
 
+.card-content-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  height: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.card-content-wrap .h4 {
+  margin-bottom: 16px;
+}
+
+.card-content-wrap .p-text-02 {
+  margin-top: 0;
+}
 
 #w-node-b43d7347-22c3-5de8-c06d-1928045d21cf-d10f5175,
 #w-node-_8f0435de-635b-fd7b-ec43-1f2a3c87f6cb-d10f5175,
