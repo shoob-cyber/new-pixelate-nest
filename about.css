@@ -17029,6 +17029,53 @@ li {
 }
 
 /* --- END: Hover Effect --- */
+/* --- START: 4-Card Founder Grid Update --- */
+
+/* Make the container a responsive 2x2 grid */
+.teams-v1-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 40px; /* Space between cards, both vertically and horizontally */
+}
+
+/* Remove the old fixed width from the cards so they fit the grid */
+.teams-v1-card-list {
+  width: 100%;
+}
+
+/* Responsive: Stack to a single column on tablets and below */
+@media screen and (max-width: 991px) {
+  .teams-v1-bottom {
+    grid-template-columns: 1fr; /* 1 column */
+    gap: 60px; /* A bit more vertical space on mobile */
+  }
+}
+
+/* --- END: 4-Card Founder Grid Update --- */
+/* --- START: Hover Animation for Founder Cards --- */
+
+/* 1. Prepare the main card container for a smooth transition */
+.teams-v1-card-list {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 2. Define the "lift" and shadow effect on the card when hovered */
+.teams-v1-card-list:hover {
+  transform: translateY(-10px); /* Lifts the card up */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for depth */
+}
+
+/* 3. Prepare the founder's image for a smooth zoom transition */
+.teams-v1-image .fit-cover {
+  transition: transform 0.4s ease;
+}
+
+/* 4. Apply the zoom effect to the image ONLY when the parent card is hovered */
+.teams-v1-card-list:hover .teams-v1-image .fit-cover {
+  transform: scale(1.08); /* Zooms the image in by 8% */
+}
+
+/* --- END: Hover Animation for Founder Cards --- */
 #w-node-b43d7347-22c3-5de8-c06d-1928045d21cf-d10f5175,
 #w-node-_8f0435de-635b-fd7b-ec43-1f2a3c87f6cb-d10f5175,
 #w-node-d4727884-0b53-9883-cba4-0cf32b2953ba-d10f5175 {

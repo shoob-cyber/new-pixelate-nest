@@ -16813,6 +16813,77 @@ li {
 .delay-3 { animation-delay: 0.6s; }
 
 /* --- END: Custom Intro Animation --- */
+/* --- START: Enhanced Feature Card Section Styles --- */
+
+/* This removes the excessive top margin from the template */
+.compare.v1 {
+  margin-top: 100px;
+}
+
+/* This creates the responsive grid for the cards */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+/* Styling for each individual feature card */
+.feature-card {
+  background: rgba(30, 30, 30, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for the icons */
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 25px;
+  background-image: linear-gradient(135deg, var(--primary), #ab2020);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-icon img {
+  width: 28px;
+  height: 28px;
+  filter: invert(1); /* Makes the black SVG icons white */
+}
+
+/* Styling for the text inside the card */
+.feature-card .h4 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #ffffffb3; /* 70% white */
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments for the section heading */
+@media screen and (max-width: 767px) {
+  .compare-top {
+    text-align: center;
+  }
+}
+
+/* --- END: Enhanced Feature Card Section Styles --- */
 #w-node-b43d7347-22c3-5de8-c06d-1928045d21cf-d10f5175, #w-node-_8f0435de-635b-fd7b-ec43-1f2a3c87f6cb-d10f5175, #w-node-d4727884-0b53-9883-cba4-0cf32b2953ba-d10f5175 {
   grid-area: span 1 / span 4 / span 1 / span 4;
 }
