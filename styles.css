@@ -17186,3 +17186,173 @@ li {
     grid-column: span 1 / span 1;
   }
 }
+/* --- START: MOBILE RESPONSIVE FIXES --- */
+
+@media screen and (max-width: 767px) {
+
+  /* --- HERO SECTION --- */
+  /* Stacks the text and the logo vertically */
+  .home-hero-v1-wrap {
+    flex-direction: column-reverse; /* Puts the logo on top of the text */
+    gap: 40px; /* Adds space between the logo and the text */
+    text-align: center;
+  }
+
+  .hero-v1-left {
+    align-items: center; /* Centers the "Introducing our insights" tag */
+  }
+
+  .hero-v1-title-wrap {
+    align-items: center; /* Centers the sub-heading */
+  }
+
+  .heading-wrap.hero-v1-heading {
+    text-align: center;
+  }
+
+  /* --- SUCCESS METRICS SECTION --- */
+  /* Stacks the metric boxes vertically */
+  .success-rate-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  /* --- WHY CHOOSE US SECTION --- */
+  /* Stacks the heading and subheading */
+  .service-01-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  /* Stacks the service list items */
+  .service-01-list {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+  .service-01-left-list {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+  }
+  .service-01-right-list {
+      width: 100%;
+  }
+
+
+  /* --- FEATURES SECTION --- */
+  /* Stacks the feature cards vertically */
+  .features-01-card-wrapper {
+    flex-direction: column;
+  }
+  .features-01-card-list {
+    width: 100% !important;
+  }
+
+  /* --- TECH STACK SECTION --- */
+  /* Deactivates the complex rotating animation for a clean mobile grid */
+  .tech-stack-bottom {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    animation: none; /* Stop the container from spinning */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Resets the individual logo styles for the new grid layout */
+  .tech-logo {
+    position: static;
+    transform: none !important; /* Override existing transforms */
+    animation: none; /* Stop the logos from counter-spinning */
+    width: 65px; /* Give them a uniform size */
+    height: 65px;
+  }
+
+  /* Reset all logo sizes to the new uniform size */
+   .logo-ae, .logo-ai, .logo-lr, .logo-pr, .logo-ps,
+   .logo-fire, .logo-resolve, .logo-bootstrap, .logo-css,
+   .logo-flutter, .logo-html, .logo-js, .logo-react,
+   .logo-tailwind, .logo-ts, .logo-express, .logo-mongo,
+   .logo-node, .logo-python, .logo-aws, .logo-vercel {
+      width: 65px;
+      height: 65px;
+   }
+
+
+  /* --- TESTIMONIALS SECTION --- */
+  .testimonials-01-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+
+  /* --- FAQ SECTION --- */
+  /* Stacks the two FAQ columns */
+  .faq-wrap {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .faq-left {
+    align-items: center;
+    text-align: center;
+  }
+  .heading-wrap.faq-heading {
+      text-align: center;
+  }
+  .faq-right {
+    width: 100%;
+  }
+
+  /* --- FOOTER SECTION --- */
+  /* Stacks footer columns and centers content */
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+  .footer-top-left {
+    align-items: center;
+  }
+  .footer-right-link-wrap {
+      width: 100%;
+      justify-content: space-around;
+      text-align: center;
+  }
+  .footer-link-list {
+      align-items: center;
+  }
+}
+/* --- END: MOBILE RESPONSIVE FIXES --- */
+/* --- START: Additional Mobile Fixes --- */
+
+/* This rule acts as a safeguard to ensure no element can be wider 
+   than the screen, which prevents the horizontal scrollbar. */
+.page-wrapper {
+  overflow-x: hidden;
+}
+
+/* This targets the navigation bar on tablets and phones to ensure 
+   it fits the screen width instead of staying at a fixed width. */
+@media screen and (max-width: 991px) {
+  .navbar,
+  .nav-bar-wrap {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* --- END: Additional Mobile Fixes --- */
