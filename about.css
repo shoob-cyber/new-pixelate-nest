@@ -7320,11 +7320,11 @@ li {
 }
 
 .teams-v1-bottom {
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Set to 3 columns for desktop */
+  gap: 24px;
   justify-content: space-between;
   margin-top: 98px;
-  display: flex;
 }
 
 .teams-v1-card-list {
@@ -17075,6 +17075,20 @@ li {
   transform: scale(1.08); /* Zooms the image in by 8% */
 }
 
+@media screen and (max-width: 991px) {
+  .teams-v1-bottom {
+    grid-template-columns: repeat(2, 1fr); /* Set to 2 columns for tablets */
+    gap: 20px;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .teams-v1-bottom {
+    grid-template-columns: 1fr; /* Set to 1 column for mobile */
+    gap: 30px;
+  }
+}
 /* --- END: Hover Animation for Founder Cards --- */
 #w-node-b43d7347-22c3-5de8-c06d-1928045d21cf-d10f5175,
 #w-node-_8f0435de-635b-fd7b-ec43-1f2a3c87f6cb-d10f5175,
