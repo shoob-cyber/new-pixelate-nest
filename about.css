@@ -7324,7 +7324,7 @@ li {
   grid-template-columns: repeat(4, 1fr); /* This is the new line */
   gap: 24px;
   justify-content: space-between;
-  margin-top: 98px;
+  margin-top: 50px;
 }
 
 .teams-v1-card-list {
