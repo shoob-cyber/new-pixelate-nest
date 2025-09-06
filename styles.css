@@ -4731,7 +4731,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 100px;
-    padding-bottom: 33px;
+    padding-bottom: 10px;
   }
 
   .footer-top {
@@ -17405,3 +17405,18 @@
 }
 
 /* --- END: MOBILE RESPONSIVE FIXES --- */
+/* --- START: Continuous Scroll for Testimonials --- */
+.testimonials-01-outer {
+  display: flex;
+  animation: scroll-left 40s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* --- END: Continuous Scroll --- */
