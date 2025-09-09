@@ -1936,8 +1936,7 @@
     vertical-align: top;
     color: #222;
     text-align: left;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     padding: 20px;
     text-decoration: none;
     display: inline-block;
@@ -4453,10 +4452,6 @@
     font-weight: 500;
   }
 
-  .nav-link.w--current {
-    color: var(--primary);
-  }
-
   .hide {
     display: none;
   }
@@ -4640,9 +4635,8 @@
   }
 
   .navbar-wrapper {
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
-    justify-content: space-between;
+    grid-column-gap: 14px;
+    grid-row-gap: 14px;
     align-items: center;
     display: flex;
   }
@@ -4688,11 +4682,10 @@
   }
 
   .nav-menu {
-    grid-column-gap: 20px;
+    grid-column-gap: 30px;
     grid-row-gap: 20px;
     justify-content: space-between;
     align-items: center;
-    max-width: 397px;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
@@ -8416,7 +8409,7 @@
   .full-container {
     grid-column-gap: 110px;
     grid-row-gap: 110px;
-  ../new-pixelatenest/assets/abstract_banner_with_flowing_orange_waves_design_0407.jpg  background-position: 50%;
+     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: flex-start;
@@ -10421,13 +10414,11 @@
   }
 
   .navbar {
-    width: var(--100);
+    margin: auto;
+    width: 950px;
     background-color: #0000000f;
     border: 1px solid #ffffff05;
     border-radius: 10px;
-    max-width: 636px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 7px 10px 7px 24px;
     box-shadow: inset 2px 0 16px #ffa7a74d, inset 10px 0 14px #ebbebe0d;
   }
@@ -10442,10 +10433,8 @@
   }
 
   .nav-bar-wrap {
-    width: var(--100);
-    max-width: 636px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    align-items: center;
     position: relative;
   }
 
