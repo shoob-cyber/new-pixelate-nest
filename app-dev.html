@@ -48,17 +48,28 @@
                                     <img loading="lazy" src="/assets/logo-2.png" alt="Pixelate Nest Logo" class="navbar-brand-logo" />
                                 </a>
                             </div>
-                            <!-- Navigation Menu -->
-                            <nav role="navigation" class="nav-menu w-nav-menu">
-                                <a href="/" class="nav-link w-nav-link">Home</a>
-                                <a href="/about.html" class="nav-link w-nav-link">About</a>
-                                <a href="/web-dev.html" class="nav-link w-nav-link">Web Development</a>
-                                <a href="/app-dev.html" aria-current="page" class="nav-link w-nav-link w--current">App Development</a>
-                                <a href="/pricing.html" class="nav-link w-nav-link">Pricing</a>
-                                <a href="#contact" class="nav-link w-nav-link">Contact</a>
-                            </nav>
+                            <div class="navbar-center">
+                                <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
+                                    <ul role="list" class="nav-menu w-list-unstyled">
+                                        <li class="nav-item"><a href="/" class="nav-link w-inline-block"><div class="nav-link-text">Home</div></a></li>
+                                        <li class="nav-item"><a href="/about.html" class="nav-link w-inline-block"><div class="nav-link-text">About</div></a></li>
+                                        <li class="nav-item"><a href="/features.html" class="nav-link w-inline-block"><div class="nav-link-text">Features</div></a></li>
+                                        <li class="nav-item"><a href="./pricing.html" class="nav-link w-inline-block"><div class="nav-link-text">Pricing</div></a></li>
+                                        <li class="nav-item"><a href="/web-development.html" aria-current="page" class="nav-link w-inline-block w--current"><div class="nav-link-text">Web Development</div></a></li>
+                                        <li class="nav-item"><a href="/about.html" class="nav-link w-inline-block"><div class="nav-link-text">App Development</div></a></li>
+                                        <li class="nav-item"><a href="/about.html" class="nav-link w-inline-block"><div class="nav-link-text">Video Editing</div></a></li>
+                                        <li class="nav-item"><a href="/about.html" class="nav-link w-inline-block"><div class="nav-link-text">Blogs</div></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="navbar-right">
+                                <div class="menu-button w-nav-button">
+                                    <div data-is-ix2-target="1" class="hamburger-menu" data-w-id="87959840-dee1-9d4c-adfe-a49c217b8a08" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/686b9c8a6088b99ac2420c42_Animation%20-%201751882800099.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0" data-duration="2.3333333333333335" data-ix2-initial-state="0"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="back-groung-blur"></div>
                 </div>
             </section>
 
@@ -66,9 +77,8 @@
             <div class="hero-content-wrapper">
                 <h1 class="hero-title">App Development Services</h1>
                 <p class="hero-subtitle">Transform your ideas into powerful mobile experiences</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="button primary-button">Get Started</a>
-                    <a href="#portfolio" class="button secondary-button">View Portfolio</a>
+                <div class="hero-description">
+                    <p>At Pixelate Nest, we specialize in creating innovative mobile applications that drive business growth. Our expert team develops high-performance, user-centric apps for iOS and Android platforms, utilizing cutting-edge technologies and industry best practices. From concept to deployment, we ensure your app stands out in today's competitive digital landscape.</p>
                 </div>
             </div>
         </div>
@@ -82,21 +92,21 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="/assets/ios-icon.svg" alt="iOS Development" />
+                        <img src="/assets/app-store.png" alt="iOS Development" />
                     </div>
                     <h3>iOS Development</h3>
                     <p>Native iOS apps built with Swift for optimal performance and user experience</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="/assets/android-icon.svg" alt="Android Development" />
+                        <img src="/assets/android.png" alt="Android Development" />
                     </div>
                     <h3>Android Development</h3>
                     <p>Kotlin-based Android apps that reach the vast Android user base</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="/assets/cross-platform-icon.svg" alt="Cross-Platform Development" />
+                        <img src="/assets/cross-platform.png" alt="Cross-Platform Development" />
                     </div>
                     <h3>Cross-Platform Apps</h3>
                     <p>React Native and Flutter solutions for multiple platform deployment</p>
@@ -139,16 +149,6 @@
             </div>
         </section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="portfolio-section">
-            <div class="portfolio-top">
-                <h2>Our App Portfolio</h2>
-                <p>Explore our latest mobile application projects</p>
-            </div>
-            <div class="portfolio-grid">
-                <!-- Portfolio items will be added dynamically -->
-            </div>
-        </section>
 
         <!-- Technologies Section -->
         <section class="tech-section">
@@ -172,6 +172,81 @@
                 <div class="tech-item">
                     <img src="/assets/flutter-icon.svg" alt="Flutter" />
                     <span>Flutter</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Projects Section -->
+        <section class="client-projects section-animate">
+            <div class="container">
+                <div class="projects-header">
+                    <h2>Our Client Success Stories</h2>
+                    <p>Transforming ideas into powerful mobile applications</p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/projects/health-tech-app.jpg" alt="HealthTech App" />
+                        </div>
+                        <div class="project-content">
+                            <h3>HealthTech Solutions</h3>
+                            <p>Healthcare management app with real-time monitoring</p>
+                            <div class="project-tech">
+                                <span>React Native</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/projects/edutech-platform.jpg" alt="EduTech Platform" />
+                        </div>
+                        <div class="project-content">
+                            <h3>EduTech Platform</h3>
+                            <p>Interactive learning platform for remote education</p>
+                            <div class="project-tech">
+                                <span>Flutter</span>
+                                <span>Firebase</span>
+                                <span>AWS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/projects/fintech-solution.jpg" alt="FinTech Solution" />
+                        </div>
+                        <div class="project-content">
+                            <h3>FinTech Solution</h3>
+                            <p>Secure mobile banking and investment platform</p>
+                            <div class="project-tech">
+                                <span>Swift</span>
+                                <span>Java</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/projects/ecommerce-app.jpg" alt="E-commerce App" />
+                        </div>
+                        <div class="project-content">
+                            <h3>E-commerce Platform</h3>
+                            <p>Full-featured shopping app with AR try-on</p>
+                            <div class="project-tech">
+                                <span>Kotlin</span>
+                                <span>Spring Boot</span>
+                                <span>Redis</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -225,5 +300,82 @@
             });
         });
     </script>
+    <section class="footer">
+  <div class="container">
+    <div class="footer-wrap">
+      <div class="footer-top">
+        <div class="footer-top-left">
+          <div class="footer-logo-details">
+            <div class="footer-logo-wrap">
+              <a href="/" aria-current="page" class="footer-logo w-inline-block w--current">
+                <img src="assets/only-icon.png" loading="lazy" alt="Pixelate Nest Logo" class="fit-cover" />
+              </a>
+              <p class="p-text-01">Pixelate Nest®</p>
+            </div>
+            <p class="p-text-03">
+              Creative Digital Experiences That Build Your Brand.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-right-link-wrap">
+          <div class="footer-link-wrap">
+            <div class="p-text-01">Company</div>
+            <div class="footer-link-list">
+              <a href="/about.html" class="footer-link w-inline-block">
+                <div class="footer-link-text">About Us</div>
+              </a>
+              <a href="/inner-pages/career" class="footer-link w-inline-block">
+                <div class="footer-link-text">Careers</div>
+              </a>
+              <a href="/contact.html" class="footer-link w-inline-block">
+                <div class="footer-link-text">Build With Us</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-link-wrap">
+            <div class="p-text-01">What We Do</div>
+            <div class="footer-link-list">
+              <a href="/features.html" class="footer-link w-inline-block">
+                <div class="footer-link-text">Services</div>
+              </a>
+              <a href="#" class="footer-link w-inline-block">
+                <div class="footer-link-text">Portfolio</div>
+              </a>
+              <a href="#" class="footer-link w-inline-block">
+                <div class="footer-link-text">Case Studies</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-link-wrap">
+            <div class="p-text-01">Follow us</div>
+            <div class="footer-link-list">
+              <a href="https://www.instagram.com/" target="_blank" class="footer-link w-inline-block">
+                <div class="footer-link-text">Instagram</div>
+              </a>
+              <a href="https://web.facebook.com/" target="_blank" class="footer-link w-inline-block">
+                <div class="footer-link-text">Facebook</div>
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" class="footer-link w-inline-block">
+                <div class="footer-link-text">LinkedIn</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="vertical-divider"></div>
+        <div class="footer-bottom-wrap">
+          <div class="p-text-03 text-white-60">
+            © 2025 Pixelate Nest. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
 </body>
 </html>
