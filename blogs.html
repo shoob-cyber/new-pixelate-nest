@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <title>Blogs | Pixelate Nest</title>
+    <meta content="Explore the latest insights, tutorials, and articles on video editing, web & app development, and digital marketing from the creative experts at Pixelate Nest." name="description" />
+    <meta content="Blogs | Pixelate Nest" property="og:title" />
+    <meta content="Explore the latest insights, tutorials, and articles on video editing, web & app development, and digital marketing from the creative experts at Pixelate Nest." property="og:description" />
+    <meta content="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/6875693705638d9a189cda18_Trenox%20Social-share.webp" property="og:image" />
+    <meta content="Blogs | Pixelate Nest" property="twitter:title" />
+    <meta content="Explore the latest insights, tutorials, and articles on video editing, web & app development, and digital marketing from the creative experts at Pixelate Nest." property="twitter:description" />
+    <meta content="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/6875693705638d9a189cda18_Trenox%20Social-share.webp" property="twitter:image" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: ["Great Vibes:400"]
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        !(function(o, c) {
+            var n = c.documentElement,
+                t = " w-mod-";
+            (n.className += t + "js"),
+            ("ontouchstart" in o ||
+                (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + "touch");
+        })(window, document);
+    </script>
+    <link href="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/687bf24cf3033bae8487e3e9_Trenox%20Fav.svg" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/687bf25268ea6656fee08b5f_Trenox%20Webclip%20.svg" rel="apple-touch-icon" />
+    <script type="text/javascript">
+        window.__WEBFLOW_CURRENCY_SETTINGS = {
+            currencyCode: "USD",
+            symbol: "$",
+            decimal: ".",
+            fractionDigits: 2,
+            group: ",",
+            template: '{{wf {"path":"symbol","type":"PlainText"} }} {{wf {"path":"amount","type":"CommercePrice"} }} {{wf {"path":"currencyCode","type":"PlainText"} }}',
+            hideDecimalForWholeNumbers: false,
+        };
+    </script>
+    <style>
+        .blog-section {
+            padding-top: 80px;
+            padding-bottom: 160px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px 24px;
+        }
+
+        .blog-card {
+            text-decoration: none;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            padding: 1.5px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .blog-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .blog-card-background {
+            background-color: #1a1a1a; /* Darker card background */
+            background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/685449f8323796c4ea020883_features%20(2).avif");
+            background-size: cover;
+            border-radius: 24px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-shadow: inset 4.75px 9.5px 38px #f8f8f80f;
+        }
+        .blog-card-border {
+            z-index: -1;
+            background-image: linear-gradient(#fff6, #fff0 40% 60%, #ffffff1a);
+            border-radius: 24px;
+            position: absolute;
+            inset: 0%;
+        }
+
+        .blog-card-image-wrap {
+            width: 100%;
+            height: 220px;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .blog-card-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-card-category {
+            background-color: #ffffff1a;
+            color: #ffffffb3;
+            padding: 6px 12px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+        
+        .blog-card-title {
+           margin-bottom: 12px;
+           line-height: 1.4;
+        }
+
+        .blog-card-excerpt {
+            color: #ffffffb3;
+            margin-bottom: 24px;
+            flex-grow: 1; /* Pushes author info to the bottom */
+        }
+        
+        .blog-author-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 16px;
+            border-top: 1px solid #ffffff29;
+        }
+
+        .blog-author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .blog-author-name-date .p-text-03 {
+            font-weight: 600;
+        }
+        .blog-author-name-date .date {
+            font-size: 12px;
+            color: #ffffff80;
+        }
+
+        /* Responsive Grid */
+        @media screen and (max-width: 991px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media screen and (max-width: 767px) {
+             .blog-section {
+                padding-top: 60px;
+                padding-bottom: 100px;
+            }
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="main-hero">
+            <section class="nav-wrap">
+                <div class="nav-bar-wrap">
+                    <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+                        <div class="navbar-wrapper">
+                            <div class="navbar-left">
+                                <a href="/" class="navbar-brand w-nav-brand"><img loading="lazy" src="/assets/logo-2.png" alt="Navbar Brand Image" class="navbar-brand-logo" /></a>
+                            </div>
+                            <div class="navbar-center">
+                                <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
+                                    <ul role="list" class="nav-menu w-list-unstyled">
+                                        <li class="nav-item">
+                                            <a href="/" class="nav-link w-inline-block">
+                                                <div class="nav-link-text">Home</div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href=/about.html class="nav-link w-inline-block">
+                                                <div class="nav-link-text">About</div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href=/features.html class="nav-link w-inline-block">
+                                                <div class="nav-link-text">Features</div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="./pricing.html" class="nav-link w-inline-block">
+                                                <div class="nav-link-text">Pricing</div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href=/webdev.html class="nav-link w-inline-block">
+                                                <div class="nav-link-text">Web Development</div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href=/app-dev.html class="nav-link w-inline-block">
+                                                <div class="nav-link-text">App Development</div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href=/video-ed.html class="nav-link w-inline-block">
+                                                <div class="nav-link-text">Video Editing</div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="/blogs.html" aria-current="page" class="nav-link w-inline-block w--current">
+                                                <div class="nav-link-text">Blogs</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="navbar-right">
+                                <div class="menu-button w-nav-button">
+                                    <div data-is-ix2-target="1" class="hamburger-menu" data-w-id="87959840-dee1-9d4c-adfe-a49c217b8a08" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/686b9c8a6088b99ac2420c42_Animation%20-%201751882800099.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0" data-duration="2.3333333333333335" data-ix2-initial-state="0"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back-groung-blur"></div>
+                </div>
+            </section>
+            
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-01-wrap blog-hero-wrap">
+                        <div class="short-teg-wrap">
+                            <div class="short-teg caption-linear-bg">
+                                <div class="tagline _01">Our Blog</div>
+                                <div class="teg-icon"><img src="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/68430a4b59642a7f50e3d955_Top%20str.svg" loading="lazy" alt="" class="fit-cover" /></div>
+                            </div>
+                        </div>
+                        <div class="heading-wrap">
+                            <h1 class="h1 text-linear">Pixelate Nest Insights</h1>
+                        </div>
+                        <div class="sub-heading-wrap features-v1-sub-heading">
+                            <p class="p-text-01 text-white-60">
+                                Explore the latest in creative tech, video editing, development, and digital marketing strategies from our team of experts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="blog-section">
+            <div class="container">
+                <div class="blog-grid">
+                    <a href="#" class="blog-card">
+                        <div class="blog-card-background">
+                            <div class="blog-card-image-wrap">
+                                <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Team collaborating on a project" class="fit-cover" />
+                            </div>
+                            <span class="blog-card-category">Digital Marketing</span>
+                            <h4 class="h4 blog-card-title">The SEO Checklist: 10 Steps to Rank Higher in 2025</h4>
+                            <p class="p-text-03 blog-card-excerpt">Navigate the ever-changing landscape of SEO with our essential checklist. We cover everything from keyword research to technical optimization.</p>
+                            <div class="blog-author-info">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author Avatar" class="blog-author-avatar" />
+                                <div class="blog-author-name-date">
+                                    <p class="p-text-03">Jane Doe</p>
+                                    <p class="date">Sep 10, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-card-border"></div>
+                    </a>
+                    <a href="#" class="blog-card">
+                         <div class="blog-card-background">
+                            <div class="blog-card-image-wrap">
+                                <img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Code on a screen" class="fit-cover" />
+                            </div>
+                            <span class="blog-card-category">Web Development</span>
+                            <h4 class="h4 blog-card-title">From Figma to Flutter: A Guide to Seamless App Prototyping</h4>
+                            <p class="p-text-03 blog-card-excerpt">Learn how our team bridges the gap between design and development, turning beautiful Figma mockups into functional Flutter applications.</p>
+                            <div class="blog-author-info">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author Avatar" class="blog-author-avatar" />
+                                <div class="blog-author-name-date">
+                                    <p class="p-text-03">John Smith</p>
+                                    <p class="date">Sep 05, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-card-border"></div>
+                    </a>
+                    <a href="#" class="blog-card">
+                         <div class="blog-card-background">
+                            <div class="blog-card-image-wrap">
+                                <img src="https://images.pexels.com/photos/7174400/pexels-photo-7174400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Video editing software timeline" class="fit-cover" />
+                            </div>
+                            <span class="blog-card-category">Video Editing</span>
+                            <h4 class="h4 blog-card-title">5 Cinematic Color Grading Tips in DaVinci Resolve</h4>
+                            <p class="p-text-03 blog-card-excerpt">Elevate your video projects from ordinary to cinematic. Our lead editor shares five fundamental tips for achieving a professional color grade.</p>
+                            <div class="blog-author-info">
+                                <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="Author Avatar" class="blog-author-avatar" />
+                                <div class="blog-author-name-date">
+                                    <p class="p-text-03">Emily Carter</p>
+                                    <p class="date">Aug 28, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-card-border"></div>
+                    </a>
+                    <a href="#" class="blog-card">
+                         <div class="blog-card-background">
+                            <div class="blog-card-image-wrap">
+                                <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Close up of code" class="fit-cover" />
+                            </div>
+                            <span class="blog-card-category">Web Development</span>
+                            <h4 class="h4 blog-card-title">Why a Headless CMS is the Future for Your Business Website</h4>
+                            <p class="p-text-03 blog-card-excerpt">Discover the flexibility and performance benefits of decoupling your frontend from your backend. Is a headless CMS right for you?</p>
+                             <div class="blog-author-info">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author Avatar" class="blog-author-avatar" />
+                                <div class="blog-author-name-date">
+                                    <p class="p-text-03">John Smith</p>
+                                    <p class="date">Aug 21, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-card-border"></div>
+                    </a>
+                     <a href="#" class="blog-card">
+                         <div class="blog-card-background">
+                            <div class="blog-card-image-wrap">
+                                <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Analytics on a laptop screen" class="fit-cover" />
+                            </div>
+                            <span class="blog-card-category">Digital Marketing</span>
+                            <h4 class="h4 blog-card-title">Content is King, But Distribution is Queen: A Modern Strategy</h4>
+                            <p class="p-text-03 blog-card-excerpt">Creating great content is only half the battle. Learn how to effectively distribute your content to reach the right audience and maximize your ROI.</p>
+                             <div class="blog-author-info">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author Avatar" class="blog-author-avatar" />
+                                <div class="blog-author-name-date">
+                                    <p class="p-text-03">Jane Doe</p>
+                                    <p class="date">Aug 15, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-card-border"></div>
+                    </a>
+                     <a href="#" class="blog-card">
+                         <div class="blog-card-background">
+                            <div class="blog-card-image-wrap">
+                                <img src="https://images.pexels.com/photos/4057738/pexels-photo-4057738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Video camera recording an interview" class="fit-cover" />
+                            </div>
+                            <span class="blog-card-category">Video Editing</span>
+                            <h4 class="h4 blog-card-title">The Power of a Brand Story: Crafting Videos That Connect</h4>
+                            <p class="p-text-03 blog-card-excerpt">We break down the key elements of compelling video storytelling, from scripting and storyboarding to the final edit that captures hearts and minds.</p>
+                            <div class="blog-author-info">
+                                <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="Author Avatar" class="blog-author-avatar" />
+                                <div class="blog-author-name-date">
+                                    <p class="p-text-03">Emily Carter</p>
+                                    <p class="date">Aug 09, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-card-border"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-v1">
+            <div class="container">
+                <div class="cta-v1-wrap">
+                    <div class="cta-v1-main-wrap">
+                        <div class="cta-v1-main">
+                            <div data-w-id="f45b20ca-9f45-fafa-f816-47d73e45a344" class="short-teg-wrap">
+                                <div data-w-id="f45b20ca-9f45-fafa-f816-47d73e45a345" class="short-teg caption-linear-bg">
+                                    <div data-w-id="f45b20ca-9f45-fafa-f816-47d73e45a346" class="tagline _01">
+                                        Let's Collaborate
+                                    </div>
+                                    <div data-w-id="f45b20ca-9f45-fafa-f816-47d73e45a348" class="teg-icon">
+                                        <img src="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/68430a4b59642a7f50e3d955_Top%20str.svg" loading="lazy" alt="" class="fit-cover" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-wrap">
+                                <h2 class="h2 text-linear">
+                                    Your Creative Growth Partner. Let's Build a Brand That Stands Out !
+                                </h2>
+                            </div>
+                            <div class="sub-heading-wrap">
+                                <p class="p-text-02 text-white-70">
+                                    Partner with our in-house team of developers, designers, and marketers to build a powerful and cohesive online presence from concept to conversion.
+                                </p>
+                            </div>
+                            <div data-w-id="b0e2ffc4-90a4-c98b-5f83-a750c460e65c" class="cta-v1-button-wrap">
+                                <a data-w-id="b0e2ffc4-90a4-c98b-5f83-a750c460e65d" href="/contact.html" class="cta-button w-inline-block">
+                                    <div class="button-02-cover _02">
+                                        <div class="button-02-text">
+                                            <div class="button-text-01 text-white">Get a Free Consultation</div>
+                                            <div class="button-text-01 text-white">Get a Free Consultation</div>
+                                        </div>
+                                        <img loading="lazy" src="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/6842e0e84343d9719dd6e3e7_Vector%20Top%20White.svg" alt="" class="button-icon" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-v1-card-shadow"></div>
+                    <div data-w-id="b0e2ffc4-90a4-c98b-5f83-a750c460e666" class="ta-v1-dot">
+                        <img src="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/6856448a7b751bd4fcaef4af_BG%20Dot.avif" loading="lazy" alt="" class="cta-bg-gif" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="container">
+                <div class="footer-wrap">
+                    <div class="footer-top">
+                        <div class="footer-top-left">
+                            <div class="footer-logo-details">
+                                <div class="footer-logo-wrap">
+                                    <a href="/" aria-current="page" class="footer-logo w-inline-block w--current">
+                                        <img src="assets/only-icon.png" loading="lazy" alt="Pixelate Nest Logo" class="fit-cover" />
+                                    </a>
+                                    <p class="p-text-01">Pixelate Nest®</p>
+                                </div>
+                                <p class="p-text-03">
+                                    Creative Digital Experiences That Build Your Brand.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer-right-link-wrap">
+                            <div class="footer-link-wrap">
+                                <div class="p-text-01">Company</div>
+                                <div class="footer-link-list">
+                                    <a href="/about.html" class="footer-link w-inline-block">
+                                        <div class="footer-link-text">About Us</div>
+                                    </a>
+                                    <a href="/inner-pages/career" class="footer-link w-inline-block">
+                                        <div class="footer-link-text">Careers</div>
+                                    </a>
+                                    <a href="/contact.html" class="footer-link w-inline-block">
+                                        <div class="footer-link-text">Build With Us</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer-link-wrap">
+                                <div class="p-text-01">What We Do</div>
+                                <div class="footer-link-list">
+                                    <a href="/features.html" class="footer-link w-inline-block">
+                                        <div class="footer-link-text">Services</div>
+                                    </a>
+                                    <a href="#" class="footer-link w-inline-block">
+                                        <div class="footer-link-text">Portfolio</div>
+                                    </a>
+                                    <a href="#" class="footer-link w-inline-block">
+                                        <div class="footer-link-text">Case Studies</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer-link-wrap">
+                                <div class="p-text-01">Follow us</div>
+                                <div class="footer-link-list">
+                                    <a href="https://www.instagram.com/" target="_blank" class="footer-link w-inline-block">
+                                        <div class="footer-link-text">Instagram</div>
+                                    </a>
+                                    <a href="https://web.facebook.com/" target="_blank" class="footer-link w-inline-block">
+                                        <div class="footer-link-text">Facebook</div>
+                                    </a>
+                                    <a href="https://www.linkedin.com/" target="_blank" class="footer-link w-inline-block">
+                                        <div class="footer-link-text">LinkedIn</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="vertical-divider"></div>
+                        <div class="footer-bottom-wrap">
+                            <div class="p-text-03 text-white-60">
+                                © 2025 Pixelate Nest. All Rights Reserved.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6840859dc0e82803d10f5190" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/js/webflow.schunk.40f517e78f82ea08.js" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/js/webflow.schunk.a0aa2c62e5a30201.js" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/js/webflow.78bdae07.c61f572d9ae910e4.js" type="text/javascript"></script>
+</body>
+
+</html>

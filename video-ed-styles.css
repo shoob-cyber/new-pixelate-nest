@@ -1,0 +1,138 @@
+/* Hero Section Styles */
+.video-hero-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.video-hero-wrap {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Client Projects Section */
+.client-projects {
+    padding-top: 80px;
+    padding-bottom: var(--_responsive---margin-160-px); /* Uses theme variable */
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 80px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects-header h2 {
+    margin-bottom: 16px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #ffffff0d; /* Uses theme's transparent white */
+    border: 1px solid #ffffff1f; /* Uses theme's transparent border color */
+    border-radius: 24px; /* Matches theme's card radius */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 2px 0 16px #ffa7a71a, inset 10px 0 14px #ebbebe0a;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 40px rgba(255, 100, 13, 0.2); /* Added a subtle orange glow on hover */
+}
+
+.project-image {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-content h3 {
+    color: var(--white); /* Use theme variable */
+}
+
+.project-content p {
+    color: #ffffffb3; /* Use theme's semi-transparent white */
+    margin-bottom: 24px;
+    flex-grow: 1; /* Pushes tags to the bottom */
+}
+
+.project-tech {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-tech span {
+    background-color: #ffffff1a;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffffb3;
+}
+
+/* Scroll Animation */
+.section-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 991px) {
+    .projects-grid {
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .video-hero-section {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .projects-header {
+        margin-bottom: 60px;
+    }
+}

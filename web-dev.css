@@ -252,4 +252,21 @@
     transform: translateY(-2px);
     color: #ffffffcc; /* Slightly brighter on hover */
 }
+
+/* video-ed.css */
+.hero-title {
+  font-size: var(--h2);
+  font-weight: 700;
+  background: var(--text-linear);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--grid-gap);
+}
+
+/* Use existing component classes instead of custom ones */
 /* --- END: WEB DEVELOPMENT PAGE STYLES --- */
