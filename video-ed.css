@@ -1720,6 +1720,30 @@
   .w-lightbox-noscroll {
     overflow: hidden;
   }
+    .cta-v1-button-wrap {
+    margin-top: 20px;
+  }
+
+  .cta-button {
+    z-index: 1;
+    background-image: linear-gradient(#ff640d, #ab2020);
+    border: 0 solid #ff640d;
+    border-radius: 10px;
+    flex-flow: column;
+    align-items: center;
+    padding: 15px 36px 15px 37px;
+    text-decoration: none;
+    transition: background-color 0.9s;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px #fff;
+  }
+
+  .cta-button:hover {
+    background-image: none;
+  }
+
 
   @media (min-width: 768px) {
     .w-lightbox-content {
@@ -5462,6 +5486,31 @@
     inset: 0% auto 0% -1%;
   }
 
+  /* --- START: New Tech Stack Section Styles --*/
+  .tech-stack {
+    margin-top: 160px;
+    margin-bottom: 160px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: radial-gradient(circle at 50% 50%, rgba(255, 100, 13, 0.3), #00000000 70%);
+  }
+
+  .tech-stack-top {
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .tech-stack-bottom {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    height: 650px;
+    margin: 80px auto 0;
+    animation: spin-clockwise 40s linear infinite; /* Animation for the container */
+  }
 
   .tech-logo {
     position: absolute;
@@ -14904,14 +14953,6 @@
       font-size: 11px;
     }
 
-    .nav-menu-wrapper {
-      background-image: url("https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/68433b10b9965cd0f05f3b9f_Link%20BG.avif");
-      background-repeat: no-repeat;
-      background-size: cover;
-      border-radius: 10px;
-      margin-top: 10px;
-      padding: 24px 20px;
-    }
 
     .navbar-brand {
       width: 35px;
@@ -17191,6 +17232,13 @@
       gap: 16px;
     }
 
+    /* Stacks the service list items */
+    .service-01-list {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 24px;
+    }
     .service-01-left-list {
         flex-direction: column;
         align-items: center;
@@ -17204,9 +17252,47 @@
 
     /* --- FEATURES SECTION --- */
     /* Stacks the feature cards vertically */
+    .features-01-card-wrapper {
+      flex-direction: column;
+    }
     .features-01-card-list {
       width: 100% !important;
     }
+
+    /* --- TECH STACK SECTION --- */
+    /* Deactivates the complex rotating animation for a clean mobile grid */
+    .tech-stack-bottom {
+      position: static;
+      width: 100%;
+      height: auto;
+      margin-top: 60px;
+      animation: none; /* Stop the container from spinning */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Resets the individual logo styles for the new grid layout */
+    .tech-logo {
+      position: static;
+      transform: none !important; /* Override existing transforms */
+      animation: none; /* Stop the logos from counter-spinning */
+      width: 65px; /* Give them a uniform size */
+      height: 65px;
+    }
+
+    /* Reset all logo sizes to the new uniform size */
+    .logo-ae, .logo-ai, .logo-lr, .logo-pr, .logo-ps,
+    .logo-fire, .logo-resolve, .logo-bootstrap, .logo-css,
+    .logo-flutter, .logo-html, .logo-js, .logo-react,
+    .logo-tailwind, .logo-ts, .logo-express, .logo-mongo,
+    .logo-node, .logo-python, .logo-aws, .logo-vercel {
+        width: 65px;
+        height: 65px;
+    }
+
 
     /* --- TESTIMONIALS SECTION --- */
     .testimonials-01-top {
@@ -17215,135 +17301,8 @@
       text-align: center;
       gap: 16px;
     }
-    /* --- START: NEW TECH STACK LOGO SCROLLER STYLES --- */
-    .tech-stack {
-      margin-top: var(--_responsive---margin-160-px);
-      margin-bottom: var(--_responsive---margin-160-px);
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-
-    .tech-stack-top {
-      grid-column-gap: 32px;
-      grid-row-gap: 32px;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      margin-bottom: 80px; /* Added space between title and scroller */
-    }
-        /* --- START: REVISED TECH STACK LOGO SCROLLER STYLES --- */
-    .tech-stack {
-      margin-top: var(--_responsive---margin-160-px);
-      margin-bottom: var(--_responsive---margin-160-px);
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-
-    .tech-stack-top {
-      grid-column-gap: 32px;
-      grid-row-gap: 32px;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      margin-bottom: 80px;
-    }
-
-    .logo-scroller-container {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      width: 100%; /* Ensure container takes full width */
-    }
-
-    .logo-scroller {
-      overflow: hidden;
-      position: relative; /* Needed for the fade effect */
-      padding: 10px 0; /* Add some vertical padding for logos */
-    }
-
-    /* Fade effect at edges */
-    .logo-scroller::before,
-    .logo-scroller::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      width: 10%; /* Width of the fade */
-      height: 100%;
-      z-index: 10;
-      pointer-events: none; /* Allows clicks to pass through */
-    }
-
-    .logo-scroller::before {
-      left: 0;
-      background: linear-gradient(to right, #0a0e1a, transparent); /* Adjusted to your background color */
-    }
-
-    .logo-scroller::after {
-      right: 0;
-      background: linear-gradient(to left, #0a0e1a, transparent); /* Adjusted to your background color */
-    }
 
 
-    .logo-scroller-inner {
-      display: flex;
-      width: max-content; /* Allows all logos to sit on one line */
-      animation: scroll 60s linear infinite; /* Adjusted duration for smoother animation */
-      align-items: center; /* Vertically align logos */
-    }
-
-    /* Duplicate the inner content to create the seamless loop */
-    .logo-scroller-inner .logo-item {
-        padding: 0 30px; /* Space between each logo */
-        flex-shrink: 0; /* Prevent logos from shrinking */
-    }
-
-
-    .logo-scroller[data-direction="right"] .logo-scroller-inner {
-      animation-direction: reverse; /* Scrolls right */
-    }
-
-    .logo-scroller:hover .logo-scroller-inner {
-      animation-play-state: paused;
-    }
-
-    .logo-scroller-inner img {
-      height: 50px; /* Uniform height for all logos */
-      max-width: 180px; /* Prevent wide logos from being too large */
-      object-fit: contain; /* Ensures logos fit within their bounds without cropping */
-      filter: grayscale(1) brightness(1.2); /* Desaturated and slightly brightened */
-      transition: filter 0.3s ease;
-      vertical-align: middle; /* Ensures logos are centered */
-    }
-
-    .logo-scroller-inner img:hover {
-      filter: grayscale(0) brightness(1); /* Colorize on hover */
-    }
-
-    /* Keyframe for scrolling animation */
-    @keyframes scroll {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%); /* Scroll exactly half the content width */
-      }
-    }
-
-    /* Responsive adjustments */
-    @media screen and (max-width: 767px) {
-      .logo-scroller-inner img {
-        height: 40px;
-      }
-      .logo-scroller-inner .logo-item {
-        padding: 0 20px;
-      }
-      .logo-scroller-inner {
-        animation-duration: 40s; /* Faster scroll on smaller screens */
-      }
-    }
-    /* --- END: REVISED TECH STACK LOGO SCROLLER STYLES --- */
     /* --- FAQ SECTION --- */
     /* Stacks the two FAQ columns */
     .faq-wrap {
@@ -17386,6 +17345,10 @@
 
   /* This rule acts as a safeguard to ensure no element can be wider 
     than the screen, which prevents the horizontal scrollbar. */
+  .page-wrapper {
+    overflow-x: hidden;
+  }
+
   /* This targets the navigation bar on tablets and phones to ensure 
     it fits the screen width instead of staying at a fixed width. */
   @media screen and (max-width: 991px) {
@@ -17448,6 +17411,30 @@
 
 /* --- END: MOBILE RESPONSIVE FIXES --- */
 /* --- START: Continuous Scroll for Testimonials --- */
+
+  .main-hero {
+    background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    position: relative;
+  }
+
+  .main-hero.home-v1-hero {
+    background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  }
+
+  .main-hero.priceing-hero {
+    background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+  }
+
+  .main-hero.integrations {
+    background-image: url("https://ik.imagekit.io/qc9guu8hf/abstract_banner_with_flowing_orange_waves_design_0407.jpg?updatedAt=1755079814522");
+    height: auto;
+    position: relative;
+  }
+
 .testimonials-01-outer {
   display: flex;
   animation: scroll-left 40s linear infinite;
@@ -17462,122 +17449,359 @@
   }
 }
 /* --- END: Continuous Scroll --- */
-/* --- START: 3D LOGO CAROUSEL STYLES --- */
-.tech-stack-top {
-  margin-bottom: 100px;
+
+/* Hero Section */
+.hero-section {
+    background-color: #000;
+    padding: 120px 0;
+    color: #fff;
+    position: relative;
 }
 
-.tech-carousel-container {
-  height: 250px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  perspective: 1200px; /* This creates the 3D space */
+.hero-content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.tech-carousel {
-  position: relative;
-  width: 150px; /* Adjust this to change the overall size */
-  height: 150px;
-  transform-style: preserve-3d;
-  animation: rotate-carousel 30s linear infinite;
+.hero-title {
+    font-size: 48px;
+    margin-bottom: 16px;
+    background: linear-gradient(to right, #fff, rgba(255,255,255,0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.tech-carousel-container:hover .tech-carousel {
-  animation-play-state: paused;
+.hero-subtitle {
+    font-size: 24px;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 24px;
 }
 
-.logo-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease, background 0.3s ease;
+.hero-description {
+    color: rgba(255,255,255,0.6);
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-.logo-item:hover {
-  transform: scale(1.1) !important; /* Bring hovered item forward */
-  background: rgba(255, 255, 255, 0.1);
+/* Client Projects Section */
+.client-projects {
+    background-color: #000;
+    padding: 100px 0;
+    color: #fff;
 }
 
-.logo-item img {
-  height: 60px;
-  width: 60px;
-  object-fit: contain;
-  filter: brightness(0) invert(1) grayscale(1) opacity(0.7);
-  transition: filter 0.3s ease;
+.projects-header {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.logo-item:hover img {
-  filter: brightness(0) invert(1) grayscale(0) opacity(1);
+.projects-header h2 {
+    font-size: 48px;
+    margin-bottom: 16px;
+    background: linear-gradient(to right, #fff, rgba(255,255,255,0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* Positioning each of the 12 logos in a circle */
-.logo-item:nth-child(1) { transform: rotateY(0deg) translateZ(300px); }
-.logo-item:nth-child(2) { transform: rotateY(30deg) translateZ(300px); }
-.logo-item:nth-child(3) { transform: rotateY(60deg) translateZ(300px); }
-.logo-item:nth-child(4) { transform: rotateY(90deg) translateZ(300px); }
-.logo-item:nth-child(5) { transform: rotateY(120deg) translateZ(300px); }
-.logo-item:nth-child(6) { transform: rotateY(150deg) translateZ(300px); }
-.logo-item:nth-child(7) { transform: rotateY(180deg) translateZ(300px); }
-.logo-item:nth-child(8) { transform: rotateY(210deg) translateZ(300px); }
-.logo-item:nth-child(9) { transform: rotateY(240deg) translateZ(300px); }
-.logo-item:nth-child(10) { transform: rotateY(270deg) translateZ(300px); }
-.logo-item:nth-child(11) { transform: rotateY(300deg) translateZ(300px); }
-.logo-item:nth-child(12) { transform: rotateY(330deg) translateZ(300px); }
-
-/* The rotation animation */
-@keyframes rotate-carousel {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(360deg); }
+.projects-header p {
+    color: rgba(255,255,255,0.6);
+    font-size: 18px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 991px) {
-  .logo-item:nth-child(1) { transform: rotateY(0deg) translateZ(250px); }
-  .logo-item:nth-child(2) { transform: rotateY(30deg) translateZ(250px); }
-  .logo-item:nth-child(3) { transform: rotateY(60deg) translateZ(250px); }
-  .logo-item:nth-child(4) { transform: rotateY(90deg) translateZ(250px); }
-  .logo-item:nth-child(5) { transform: rotateY(120deg) translateZ(250px); }
-  .logo-item:nth-child(6) { transform: rotateY(150deg) translateZ(250px); }
-  .logo-item:nth-child(7) { transform: rotateY(180deg) translateZ(250px); }
-  .logo-item:nth-child(8) { transform: rotateY(210deg) translateZ(250px); }
-  .logo-item:nth-child(9) { transform: rotateY(240deg) translateZ(250px); }
-  .logo-item:nth-child(10) { transform: rotateY(270deg) translateZ(250px); }
-  .logo-item:nth-child(11) { transform: rotateY(300deg) translateZ(250px); }
-  .logo-item:nth-child(12) { transform: rotateY(330deg) translateZ(250px); }
-
-  .tech-carousel { width: 120px; height: 120px; }
-  .logo-item img { height: 50px; width: 50px; }
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
-@media (max-width: 767px) {
-    .tech-stack-top { margin-bottom: 80px; }
-
-    .logo-item:nth-child(1) { transform: rotateY(0deg) translateZ(200px); }
-    .logo-item:nth-child(2) { transform: rotateY(30deg) translateZ(200px); }
-    .logo-item:nth-child(3) { transform: rotateY(60deg) translateZ(200px); }
-    .logo-item:nth-child(4) { transform: rotateY(90deg) translateZ(200px); }
-    .logo-item:nth-child(5) { transform: rotateY(120deg) translateZ(200px); }
-    .logo-item:nth-child(6) { transform: rotateY(150deg) translateZ(200px); }
-    .logo-item:nth-child(7) { transform: rotateY(180deg) translateZ(200px); }
-    .logo-item:nth-child(8) { transform: rotateY(210deg) translateZ(200px); }
-    .logo-item:nth-child(9) { transform: rotateY(240deg) translateZ(200px); }
-    .logo-item:nth-child(10) { transform: rotateY(270deg) translateZ(200px); }
-    .logo-item:nth-child(11) { transform: rotateY(300deg) translateZ(200px); }
-    .logo-item:nth-child(12) { transform: rotateY(330deg) translateZ(200px); }
-
-    .tech-carousel { width: 100px; height: 100px; }
-    .logo-item img { height: 40px; width: 40px; }
+.project-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
-/* --- END: 3D LOGO CAROUSEL STYLES --- */
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.08);
+}
+
+.project-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 24px;
+}
+
+.project-content h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.project-content p {
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.project-tech {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.project-tech span {
+    background: rgba(255,255,255,0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Animation Classes */
+.section-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* CTA Section Styles */
+.cta-v1 {
+    position: relative;
+    background-color: #000;
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+.cta-content-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-heading {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 24px;
+    background: linear-gradient(to right, #fff, rgba(255,255,255,0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cta-text {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.cta-button-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000;
+    padding: 80px 0 40px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-top-left {
+    max-width: 320px;
+}
+
+.footer-logo-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer-right-link-wrap {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.footer-link-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 991px) {
+    .cta-v1 {
+        padding: 80px 0;
+    }
+    
+    .cta-heading {
+        font-size: 36px;
+    }
+    
+    .footer {
+        padding: 60px 0 30px;
+    }
+
+    .footer-right-link-wrap {
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cta-text {
+        font-size: 16px;
+    }
+    
+    .cta-button-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-top {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-top-left {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .cta-v1 {
+        padding: 60px 0;
+    }
+    
+    .cta-heading {
+        font-size: 28px;
+    }
+    
+    .footer-right-link-wrap {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 991px) {
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hero-section {
+        padding: 80px 0;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .project-image {
+        height: 200px;
+    }
+
+    .project-content h3 {
+        font-size: 20px;
+    }
+}

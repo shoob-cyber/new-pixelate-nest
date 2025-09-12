@@ -32,7 +32,7 @@
 
 .main-hero {
     opacity: 0;
-    animation: fadeInUp 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    animation: fadeInUp 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;  
     min-height: 100vh;
     display: flex;
     flex-direction: column;
