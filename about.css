@@ -109,14 +109,14 @@
   overflow: hidden;
   text-decoration: none;
   transition: transform 0.3s ease;
-  position: relative; /* ensure pseudo-element is positioned */
+  position: relative;
 }
 
 .final-team-card:hover {
   transform: translateY(-5px);
 }
 
-/* Overlay that appears on hover */
+/* Overlay container that appears on hover */
 .team-overlay {
   position: absolute;
   inset: 0;
@@ -132,13 +132,8 @@
   pointer-events: none;
 }
 
-.final-team-card:hover .team-overlay {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-/* Also show overlay when card contains focus (keyboard) */
+/* Show overlay when card is hovered or focused (for accessibility) */
+.final-team-card:hover .team-overlay,
 .final-team-card:focus-within .team-overlay,
 .final-team-card:focus .team-overlay {
   opacity: 1;
@@ -146,7 +141,41 @@
   pointer-events: auto;
 }
 
-/* Subtle image transform when hover/focus */
+/* Initial state for the text elements inside the overlay */
+.overlay-name,
+.overlay-role,
+.overlay-socials {
+  opacity: 0;
+  transform: translateY(15px); /* Start slightly lower */
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Animate the text elements when the card is hovered or focused */
+.final-team-card:hover .overlay-name,
+.final-team-card:focus-within .overlay-name,
+.final-team-card:focus .overlay-name {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.15s; /* Name appears first */
+}
+
+.final-team-card:hover .overlay-role,
+.final-team-card:focus-within .overlay-role,
+.final-team-card:focus .overlay-role {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.25s; /* Role appears second */
+}
+
+.final-team-card:hover .overlay-socials,
+.final-team-card:focus-within .overlay-socials,
+.final-team-card:focus .overlay-socials {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.35s; /* Socials appear last */
+}
+
+/* Subtle image transform on hover/focus */
 .final-team-card:hover .final-team-image,
 .final-team-card:focus-within .final-team-image,
 .final-team-card:focus .final-team-image {
@@ -159,11 +188,6 @@
   width: 100%;
   text-align: center;
   color: #fff;
-}
-
-.overlay-inner {
-  position: relative;
-  z-index: 51;
 }
 
 .overlay-name {
@@ -209,9 +233,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.final-team-image {
   position: relative;
   z-index: 0;
   transition: transform 0.35s ease, filter 0.35s ease;
@@ -220,11 +241,71 @@
 .final-team-details {
   padding: 20px;
   position: relative;
-  /* Ensure text appears above any image overlays */
   z-index: 2;
   color: #fff;
+  transition: opacity 0.28s ease, transform 0.28s ease;
 }
 
+/* --- FIX: Hides the initial details on hover --- */
+.final-team-card:hover .final-team-details,
+.final-team-card:focus-within .final-team-details,
+.final-team-card:focus .final-team-details {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* --- FIX: Adds the missing styles for the overlay --- */
+
+/* Initial state of the overlay (hidden) */
+.team-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.85) 100%);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+/* Hover state of the overlay (visible) */
+.final-team-card:hover .team-overlay {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Initial state for the text inside the overlay */
+.overlay-name,
+.overlay-role,
+.overlay-socials {
+  opacity: 1;
+  transform: translateY(15px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Hover state for the text inside the overlay */
+.final-team-card:hover .overlay-name {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.15s;
+}
+
+.final-team-card:hover .overlay-role {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.25s;
+}
+
+.final-team-card:hover .overlay-socials {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.35s;
+}
 .member-name {
   color: #fff;
   margin: 0 0 8px;
@@ -245,7 +326,6 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* If images or backgrounds are dark, ensure the text has a subtle backdrop for readability */
 .final-team-card::before {
   content: '';
   position: absolute;
