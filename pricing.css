@@ -1,6 +1,174 @@
-/* --- START: FEATURES PAGE STYLES --- */
+/* --- START: PRICING PAGE STYLES --- */
+.pricing-section {
+  padding-top: var(--_responsive---margin-80-px);
+  padding-bottom: var(--_responsive---margin-160-px);
+}
 
-/* This creates the responsive grid for the service cards */
+.pricing-category {
+  margin-bottom: 5rem;
+}
+
+.pricing-category-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.pricing-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 100, 13, 0.5);
+}
+
+.pricing-card-header h3 {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.price-container {
+  margin: 1.5rem 0;
+  color: var(--white);
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.price-unit {
+  font-size: 1rem;
+  color: #ffffffb3;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  flex-grow: 1;
+}
+
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #ffffffd9;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.feature-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pricing-card .button-02 {
+  width: 100%;
+  margin-top: auto;
+  padding: 15px 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.best-value-badge {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  transform: translateY(-50%);
+  background-image: linear-gradient(to right, var(--primary), #ab2020);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 100, 13, 0.3);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add these classes before the existing pricing styles */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Add animation delay utilities */
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+/* --- END: PRICING PAGE STYLES --- */
+
+/* Keep existing feature styles */
+/* --- START: FEATURES PAGE STYLES --- */
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
