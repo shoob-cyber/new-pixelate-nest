@@ -116,9 +116,11 @@
                   id="email-form"
                   name="email-form"
                   data-name="Email Form"
-                  method="get"
+                  method="POST"
                   class="contact-form-wrap"
+                  onsubmit="return handleFormSubmit(event)"
                 >
+                  <input type="hidden" id="selected-plan" name="selected-plan" value="">
                   <div class="contact-form-list">
                     <label for="name" class="p-text-03">Full Name</label>
                     <input
@@ -332,5 +334,6 @@
       src="https://cdn.prod.website-files.com/6840859dc0e82803d10f5190/js/webflow.schunk.40f517e78f82ea08.js"
       type="text/javascript"
     ></script>
+    <script src="/js/form-handler.js"></script>
   </body>
 </html>
