@@ -7,8 +7,8 @@ const app = express();
 
 // Update CORS configuration
 app.use(cors({
-    origin: ['http://localhost:5500', 'http://127.0.0.1:5500', 'https://pixelatenest.com'],
-    methods: ['POST'],
+    origin: ['http://localhost:5500', 'http://127.0.0.1:5500', 'http://127.0.0.1:5501', 'https://pixelatenest.com'],
+    methods: ['POST', 'OPTIONS'], // Add OPTIONS here
     credentials: true
 }));
 
@@ -20,7 +20,7 @@ const WEBSITE_URL = process.env.WEBSITE_URL || 'http://localhost:5500';
 const emailHeader = `
 <div style="background-color: #1a1a1a; color: white; padding: 20px;">
     <img src="${WEBSITE_URL}/assets/logo-2.png" alt="Pixelate Nest Logo" style="height: 50px; margin-bottom: 20px;"/>
-</div>`;
+</div>`;    
 
 const emailFooter = `
 <div style="background-color: #1a1a1a; color: #666; text-align: center; padding: 20px; margin-top: 30px;">
@@ -101,12 +101,6 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-email', async (req, res) => {
-    // Add security headers
-    res.header('Access-Control-Allow-Origin', req.headers.origin);
-    res.header('Access-Control-Allow-Credentials', true);
-    res.header('Access-Control-Allow-Methods', 'POST');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-
     try {
         const data = req.body;
 
